@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuadrantComposeTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                    Greeting(
+                    QuadrantCompose(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun QuadrantCompose(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -45,8 +45,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     device = "spec:width=411dp,height=891dp"
 )
 @Composable
-fun GreetingPreview() {
+fun QuadrantComposePreview() {
     QuadrantComposeTheme {
-        Greeting("Android")
+        QuadrantCompose("Android")
     }
 }
