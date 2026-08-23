@@ -38,7 +38,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true,
+    locale = "fr",
+    device = "spec:width=411dp,height=891dp"
+)
 @Composable
 fun GreetingPreview() {
     QuadrantComposeTheme {
